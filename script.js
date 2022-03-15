@@ -151,35 +151,15 @@ function ifAllCorrect() {
 
 // Generate Random Images
 function random() {
-  let orderedArr = [
-    `<img src="imgs/1.png" alt="candy-img">`,
-    `<img src="imgs/2.png" alt="candy-img">`,
-    `<img src="imgs/3.png" alt="candy-img">`,
-    `<img src="imgs/4.png" alt="candy-img">`,
-    `<img src="imgs/5.png" alt="candy-img">`,
-    `<img src="imgs/6.png" alt="candy-img">`,
-    `<img src="imgs/7.png" alt="candy-img">`,
-    `<img src="imgs/8.png" alt="candy-img">`,
-    `<img src="imgs/9.png" alt="candy-img">`,
-    `<img src="imgs/10.png" alt="candy-img">`,
-    `<img src="imgs/1.png" alt="candy-img">`,
-    `<img src="imgs/2.png" alt="candy-img">`,
-    `<img src="imgs/3.png" alt="candy-img">`,
-    `<img src="imgs/4.png" alt="candy-img">`,
-    `<img src="imgs/5.png" alt="candy-img">`,
-    `<img src="imgs/6.png" alt="candy-img">`,
-    `<img src="imgs/7.png" alt="candy-img">`,
-    `<img src="imgs/8.png" alt="candy-img">`,
-    `<img src="imgs/9.png" alt="candy-img">`,
-    `<img src="imgs/10.png" alt="candy-img">`
-  ];
-
+  let orderedArr = [];
+  for (let i = 1; i <= 10; i++) {
+    orderedArr.push(`<img src="imgs/${i}.png" alt="candy-img">`)
+  }
   function rand(max) {
     return Math.floor(Math.random() * max);
   }
   
   let ranomizedArr = [];
-  
   for (let i = 0; i < 20; i++) {
     let random = rand(orderedArr.length);
     ranomizedArr[i] = orderedArr[random];
