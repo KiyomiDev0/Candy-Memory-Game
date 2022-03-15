@@ -153,7 +153,7 @@ function ifAllCorrect() {
 function random() {
   let orderedArr = [];
   for (let i = 1; i <= 10; i++) {
-    orderedArr.push(`<img src="imgs/${i}.png" alt="candy-img">`)
+     orderedArr.push(`<img src="imgs/${i}.png" alt="candy-img">`, `<img src="imgs/${i}.png" alt="candy-img">`)
   }
   function rand(max) {
     return Math.floor(Math.random() * max);
