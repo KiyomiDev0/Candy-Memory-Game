@@ -26,8 +26,12 @@ boxes.forEach((box) => {
     boxesSrcs.push(box);
     // Get The Image from Clicked Box & Add it to the Array
     imgsSrcs.push(box.querySelector('.back img').src)
+    // if a box clicked stop clicking on it
+    if(boxesSrcs.length == 1) {
+      boxesSrcs[0].classList.add("pointerfreeze")
+    }
     // If There's Two Selected Boxes
-    if (boxesSrcs.length == 2 ) {
+    else if (boxesSrcs.length == 2 ) {
       container.classList.add("pointerfreeze")
       // Stop Clicking Function
       removeFreeze(container)
@@ -40,6 +44,7 @@ boxes.forEach((box) => {
         imgsSrcs.length = 0;
         ifAllCorrect();
       } else {
+        boxesSrcs[0].classList.remove("pointerfreeze")
         countWrongs++;
         countWrongsFn();
       }
